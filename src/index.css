@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 60 30% 96%;
+  --foreground: 120 15% 10%;
+  --card: 60 30% 96%;
+  --card-foreground: 120 15% 10%;
+  --popover: 60 30% 96%;
+  --popover-foreground: 120 15% 10%;
+  --primary: 120 40% 25%;
+  --primary-foreground: 60 30% 96%;
+  --secondary: 80 20% 90%;
+  --secondary-foreground: 120 40% 25%;
+  --muted: 80 20% 90%;
+  --muted-foreground: 120 10% 40%;
+  --accent: 40 50% 85%;
+  --accent-foreground: 120 40% 25%;
+  --destructive: 0 65% 50%;
+  --destructive-foreground: 60 30% 96%;
+  --border: 120 15% 85%;
+  --input: 120 15% 85%;
+  --ring: 120 40% 25%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 120 15% 8%;
+  --foreground: 60 30% 92%;
+  --card: 120 15% 8%;
+  --card-foreground: 60 30% 92%;
+  --popover: 120 15% 8%;
+  --popover-foreground: 60 30% 92%;
+  --primary: 120 30% 60%;
+  --primary-foreground: 120 15% 8%;
+  --secondary: 120 15% 15%;
+  --secondary-foreground: 60 30% 92%;
+  --muted: 120 15% 15%;
+  --muted-foreground: 60 20% 70%;
+  --accent: 40 30% 25%;
+  --accent-foreground: 60 30% 92%;
+  --destructive: 0 50% 30%;
+  --destructive-foreground: 60 30% 92%;
+  --border: 120 15% 20%;
+  --input: 120 15% 20%;
+  --ring: 120 30% 60%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
